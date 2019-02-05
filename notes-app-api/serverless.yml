@@ -38,6 +38,9 @@ provider:
 
 functions:
   create:
+    # Defines an HTTP API endpoint that calls the main function in create.js
+    # - path: url path is /notes
+    # - method: GET request    
     handler: create.main
     events:
       - http:
@@ -58,3 +61,15 @@ functions:
         method: get
         cors: true
         authorizer: aws_iam
+
+  list:
+    # Defines an HTTP API endpoint that calls the main function in list.js
+    # - path: url path is /notes
+    # - method: GET request    
+    handler: list.main
+    events:
+      - http:
+          path: notes
+          method: get
+          cors: true
+          ahthorizer: aws_iam
