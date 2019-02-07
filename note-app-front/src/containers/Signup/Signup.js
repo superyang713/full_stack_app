@@ -111,7 +111,7 @@ class Signup extends Component {
         </FormGroup>
 
         <FormGroup controlId="password" bsSize="large">
-          <controlLabel>Password</controlLabel>
+          <ControlLabel>Password</ControlLabel>
           <FormControl
             value={this.state.password}
             onChange={this.handleChange}
