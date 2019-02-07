@@ -25,6 +25,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: dev
+  profile: fullstack-notetaking-app
   region: us-east-1
 
   # These environment variables are made available to our functions
@@ -109,7 +110,7 @@ resources:
   # DynamoDB
   - ${file(resources/dynamodb-table.yml)}
   # S3
-  - ${file(resources/s3-bucket.yml}
+  - ${file(resources/s3-bucket.yml)}
   # Cognito
-  - ${file(resources/cognito-user-pool.yml}
-  - ${file(resources/cognito-identity-pool.yml}
+  - ${file(resources/cognito-user-pool.yml)}
+  - ${file(resources/cognito-identity-pool.yml)}
