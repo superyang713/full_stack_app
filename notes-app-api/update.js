@@ -5,7 +5,7 @@ import { success, failure } from "./libs/response-lib.js";
 export async function main(event, context) {
   const data = JSON.parse(event.body);
   const params = {
-    TableName: "notes",
+    TableName: process.env.tableName,
     // "Key" defines the partition key and sort key of the item to be updated
     Key: {
       userId: event.requestContext.identity.cognitoIdentityId,
